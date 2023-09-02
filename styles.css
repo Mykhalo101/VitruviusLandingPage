@@ -1,0 +1,235 @@
+/*Defaults*/
+nav, header, footer {display: block}
+body {
+    line-height: 1;
+    margin: 0;
+}
+
+label {
+    font-size:35px;
+    font-weight:300;
+}
+p {
+    font-size: 28px;
+    line-height: 1.2;
+}
+article p{
+    font-size: 35px;
+    padding: 20px;
+}
+.container{
+    width: 100%;
+    margin: auto;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+
+.row{
+    width:100%;
+    display:flex; 
+    flex-wrap:wrap;
+    align-items:center;
+}
+.row::after{
+    display:table;
+    clear:both;
+    content: "";
+}
+
+.col-1 {width:8.33% ;}
+.col-2 {width:16.66% ;}
+.col-3 {width:25% ;}
+.col-4 {width:33.33% ;}
+.col-5 {width:41.66% ;}
+.col-6 {width:50% ;}
+.col-7 {width:58.33% ;}
+.col-8 {width:66.66% ;}
+.col-9 {width:75% ;}
+.col-10 {width:83.33% ;}
+.col-11 {width:91.66% ;}
+.col-12 {width:100% ;}
+
+*{
+    box-sizing: border-box;
+}
+/* Navbar*/
+
+nav{
+    width : 100% ;
+    margin: 0 ;
+}
+nav ul{
+    background-color: #eee;
+    overflow: hidden; /* clips the content if the text is too large for the sapce */
+    margin: 0;
+    padding: 0;
+}
+ul.top li{
+    list-style: none;
+    float: left;
+}
+ul.top li.topright{
+    float: right;
+}
+ul.top li a{
+    text-decoration: none;
+    display : block;
+    text-align:center;
+    padding: 14px;
+    text-transform: uppercase;
+    color: #666;
+}
+ul.top li a:hover{
+    background-color:#0080ff ;
+    color: white;
+}
+
+ul.top li.dropdownIcon{
+    display:none;
+}
+/* Custom Styles*/
+#section-1-gradient{
+    background: #076DFF;
+    background: -webkit-linear-gradient(#076DFF, #65a5ff);
+    background: -o-linear-gradient(#076DFF, #65a5ff);
+    background: -moz-linear-gradient(#076DFF, #65a5ff);
+    background: linear-gradient(#076DFF, #65a5ff);
+}
+h1.section2Header {
+    font-size:50px;
+}
+.leftSide-col{
+    margin-left:30%;
+}
+div.box{
+    background-color: #fff;
+    margin: 24px;
+    padding: 36px 24px 40px 24px; 
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15), 
+    0 2px 3px 0 rgba(0,0,0,.1);
+}
+div.slopeIcon img{
+    display:block;
+    margin: auto;
+    box-shadow: -2px /*h*/ -2px/*V*/ 10px/*b*/ 2px /*s*/
+    rgba(0,0,0,.15), 2px 2px 4px 2px rgba(0,0,0,1);
+
+}
+button{
+    font-size:32px;
+    font-weight: 700;
+    color:#fff;
+    background-color: #0069ff;
+    padding: 15px 60px;
+    display:block;
+    text-align: center;
+    margin: 5px;
+    border-radius: 7px;
+}
+button.learnMore{
+    display:block; 
+    margin: auto;
+}
+.icon img{
+    width: 50%;
+    height : 50%;
+    border-radius: 15px;
+    
+}
+
+div.rightSide-col{
+    margin-left:15%;
+}
+h1.large{
+    color: #fff;
+    font-size: 56px;
+    margin : 0;
+    line-height : 50px;
+
+}
+h1.section2Header{
+    font-size:65px;
+    text-align: center;
+}
+
+form h2{
+    color: #fff;
+}
+input[type = "text"]{
+    font-size: 20px;
+    width: 400px;
+    min-width:100px;   
+    padding: 5px;
+    border-radius: 7px;
+}
+footer.footsy{
+    background-color:#666;
+    padding-left:  10%;
+}
+footer.footsy h1{
+    color: #fff;
+    font-size: 35px;
+}
+footer.footsy ul{
+    list-style: none;
+    text-align: left;
+
+}
+footer.footsy ul li{
+    color:#fff;
+    font-size: 22px;
+    line-height: 1.2;
+
+}
+.videoContainer iframe{ 
+    position:relative;
+    width : 100%;
+    margin: 0;
+    overflow: hidden;
+}
+/*Mobile*/
+@media screen and (max-width: 680px){
+    ul.top li:not(:nth-child(1)) {
+        display:none;
+    }
+    ul.top li.dropdownIcon{
+        display:block;
+        float:right;
+    }
+    ul.top.responsive li {
+        display:inline;
+        float:none;
+    }
+    ul.top.responsive li a{
+        display:block;
+        text-align: left;
+    }
+    article p {
+        font-size: 25px;
+    }
+    div.box{padding: 5px; display:block;}   
+
+
+    .col-7, .col-6, .col-4{
+    width:100%;
+    margin: 0;}
+    div.mobileStack{
+        width: 50%;
+        display: block;
+    }
+
+    div.slopeIcon img{
+        width:100%;
+        margin: 10px;
+    }
+
+
+   
+
+    div.leftSide-col, div.rightSide-col{margin: 15px;}
+}
+/* note that text-decoration needs to be applied to the anchor tag.*/
+/*unordered lists have bullet points, ordered lists have number points etc. */
